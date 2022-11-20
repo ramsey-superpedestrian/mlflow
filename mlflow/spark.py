@@ -144,7 +144,7 @@ def log_model(
                             'name': 'mlflow-env',
                             'channels': ['defaults'],
                             'dependencies': [
-                                'python=3.8.15',
+                                'python=3.7.0',
                                 'pyspark=2.3.0'
                             ]
                         }
@@ -600,7 +600,7 @@ def save_model(
                             'name': 'mlflow-env',
                             'channels': ['defaults'],
                             'dependencies': [
-                                'python=3.8.15',
+                                'python=3.7.0',
                                 'pyspark=2.3.0'
                             ]
                         }

@@ -131,7 +131,7 @@ The following is an *example* dictionary representation of a conda environment::
         "name": "mlflow-env",
         "channels": ["conda-forge"],
         "dependencies": [
-            "python=3.8.15",
+            "python=3.7.0",
             {
                 "pip": [
                     "{{ package_name }}==x.y.z"

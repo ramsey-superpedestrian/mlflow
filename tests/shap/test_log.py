@@ -217,7 +217,7 @@ def test_log_model_with_pip_requirements(shap_model, tmpdir):
     with mlflow.start_run():
         mlflow.shap.log_explainer(shap_model, "model", pip_requirements=req_file.strpath)
         _assert_pip_requirements(
-            mlflow.get_artifact_uri("model"), ["mlflow", "a", *sklearn_default_reqs], strict=False
+            mlflow.get_artifact_uri("model"), ["mlflow", "a", *sklearn_default_reqs], strict=True
         )
 
     # List of requirements
@@ -228,7 +228,7 @@ def test_log_model_with_pip_requirements(shap_model, tmpdir):
         _assert_pip_requirements(
             mlflow.get_artifact_uri("model"),
             ["mlflow", "a", "b", *sklearn_default_reqs],
-            strict=False,
+            strict=True,
         )
 
     # Constraints file
@@ -240,7 +240,7 @@ def test_log_model_with_pip_requirements(shap_model, tmpdir):
             mlflow.get_artifact_uri("model"),
             ["mlflow", "b", "-c constraints.txt", *sklearn_default_reqs],
             ["a"],
-            strict=False,
+            strict=True,
         )
 
 
